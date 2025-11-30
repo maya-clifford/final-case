@@ -22,6 +22,7 @@ Both my logs and metrics are quite basic. For the logs, you can see them for the
 
 5) Results & Evaluation
 ![Sample output](assets/sample-output.PNG)
+![Sample output 2](assets/sample-output2.PNG)
 
 tests/test_app.py tests the code to make sure that the endpoint is healthy, a new workout can be created, and all the stored workouts can be fetched. The output of running python -m unittest discover -s tests is Ran 3 tests in 0.011s OK
 
