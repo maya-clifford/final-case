@@ -66,7 +66,11 @@ Both my logs and metrics are quite basic. For the logs, you can see them for the
 ![Sample output](assets/sample-output.PNG)
 ![Sample output 2](assets/sample-output2.PNG)
 
-tests/test_app.py tests the code to make sure that the endpoint is healthy, a new workout can be created, and all the stored workouts can be fetched. The output of running python -m unittest discover -s tests is Ran 3 tests in 0.011s OK. For validations, app.py ensures that any data inputted by the user has values for exercise, sets, reps, and weight. It also makes sure that the values for sets and reps can be changed to an integer and that the value for weight can be changed to a float. Since these validations are written into app.py, it won't execute if they aren't met and the user will get an error. 
+tests/test_app.py tests the code to make sure that the endpoint is healthy, a new workout can be created, and all the stored workouts can be fetched. The output of running pytests is: 
+
+3 passed in 0.18s 
+
+For validations, app.py ensures that any data inputted by the user has values for exercise, sets, reps, and weight. It also makes sure that the values for sets and reps can be changed to an integer and that the value for weight can be changed to a float. Since these validations are written into app.py, it won't execute if they aren't met and the user will get an error. 
 
 ## What’s Next: 
 
