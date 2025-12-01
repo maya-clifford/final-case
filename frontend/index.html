@@ -334,14 +334,19 @@
     </div>
 
     <script>
-        const API_URL = 'http://localhost:8080';
-
-        // Show message
-        function showMessage(text, type = 'success') {
-            const messageDiv = document.getElementById('message');
-            messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
-            setTimeout(() => messageDiv.innerHTML = '', 5000);
-        }
+        function getAPIUrl() {
+       		// If running locally
+        	if (window.location.hostname === 'localhost' || 
+            	window.location.hostname === '127.0.0.1') {
+            	return 'http://localhost:8080';
+        	}
+        	// If deployed (use same domain as frontend)
+        	return window.location.origin;
+    	}
+    
+    	const API_URL = getAPIUrl();
+    	console.log('Using API URL:', API_URL);  // Debug log
+    
 
         // Fetch and display workouts
         async function loadWorkouts(searchQuery = '') {
