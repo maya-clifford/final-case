@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from datetime import datetime
-from src.database import get_db
+from database import get_db
 from bson import ObjectId
 import os
 
