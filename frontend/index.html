@@ -346,7 +346,12 @@
     
     	const API_URL = getAPIUrl();
     	console.log('Using API URL:', API_URL);  // Debug log
-    
+        
+        function showMessage(text, type = 'success') {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = `<div class="message ${type}">${text}</div>`;
+            setTimeout(() => messageDiv.innerHTML = '', 5000);
+        }    
 
         // Fetch and display workouts
         async function loadWorkouts(searchQuery = '') {
